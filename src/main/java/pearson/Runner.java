@@ -10,7 +10,7 @@ public class Runner {
         }
 
         try {
-            if (Integer.parseInt(args[0]) <= 0 ||Integer.parseInt(args[0]) > Integer.parseInt(args[1])) {
+            if (Integer.parseInt(args[0]) <= 0 || Integer.parseInt(args[0]) > Integer.parseInt(args[1])) {
                 throw new IllegalArgumentException("startRange should be smaller than endRange and starting from 1");
             }
         } catch (final NumberFormatException e) {
