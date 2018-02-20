@@ -22,9 +22,14 @@ public class FizzBuzzTest {
     }
 
     @Test
+    public void test_containsNum_success(){
+        assertTrue(FizzBuzz.containsNum.test(1303, 3));
+    }
+
+    @Test
     public void test_execute_1to20() {
         FizzBuzz fizzBuzz = new FizzBuzz(1, 20);
-        final String expected = "1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16 17 fizz 19 buzz";
+        final String expected = "1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz";
         final String res = fizzBuzz.execute();
         assertEquals(expected, res);
     }
@@ -41,15 +46,15 @@ public class FizzBuzzTest {
     @Test
     public void test_execute_fizzBuzz_range_dim_three() {
         FizzBuzz fizzBuzz = new FizzBuzz(1, 3);
-        final List<String> expected = Arrays.asList("1", "2", "fizz");
+        final List<String> expected = Arrays.asList("1", "2", "lucky");
         final List<String> actual = fizzBuzz.fizzBuzz();
         assertEquals(expected, actual);
     }
 
     @Test
-    public void test_execute_fizzBuzz_fizz() {
+    public void test_execute_fizzBuzz_lucky() {
         FizzBuzz fizzBuzz = new FizzBuzz(3, 3);
-        final List<String> expected = Arrays.asList( "fizz");
+        final List<String> expected = Arrays.asList( "lucky");
         final List<String> actual = fizzBuzz.fizzBuzz();
         assertEquals(expected, actual);
     }
